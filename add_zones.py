@@ -39,9 +39,9 @@ borough_zones_raw = zones[zones.borough == 'Manhattan']
 borough_zones = borough_zones_raw[borough_zones_raw['location_i'] != 103]
 
 # Loop through files 1 to 12
-for i in range(8, 13):
+for i in range(1,8):
     file_path = f'data/raw/trip_data_{i}.csv'
-    output_path = f'data/with_zones/output_{i}.csv'
+    output_path = f'data/with_zones/output_{i:02d}.csv'
 
     print(f"Processing file: {file_path}")
 
