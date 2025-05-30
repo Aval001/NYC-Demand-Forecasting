@@ -1,10 +1,13 @@
 import os
 import pandas as pd
 from calendar import monthrange
+import geopandas as gpd
 
-# stations.csv has the list of Manhattan taxi zones 
-stations = pd.read_csv('stations/stations.csv')
-zone_ids = list(stations.Zone.values)
+zones = gpd.read_file('data/network_shapefile/geo_export.shp')
+borough_zones_raw = zones[zones.borough == 'Manhattan']
+borough_zones = borough_zones_raw[borough_zones_raw['location_i'] != 103]
+
+zone_ids = borough_zones['location_i'].values 
 
 # Parameters
 input_folder = "data/with_zones"
