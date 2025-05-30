@@ -1,6 +1,5 @@
 import pandas as pd
 import geopandas as gpd
-from shapely.geometry import Point
 
 def add_zones_vectorized(df, borough_zones):
     # Create GeoDataFrames for pickup and dropoff points
