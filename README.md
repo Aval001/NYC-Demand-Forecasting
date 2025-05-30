@@ -1,4 +1,4 @@
-# NYC-DEMAND-FORECASTING
+# NYC-TAXI-DEMAND-FORECASTING
 Forecasting of passenger pick-up requests for yellow cabs using XGBoost in the city of Manhattan.
 
 ### Data 
